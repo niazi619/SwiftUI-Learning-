@@ -12,6 +12,9 @@
 		186FEF052CB3ECA5004F13AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186FEF042CB3ECA5004F13AF /* Assets.xcassets */; };
 		186FEF082CB3ECA5004F13AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186FEF072CB3ECA5004F13AF /* Preview Assets.xcassets */; };
 		186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF0F2CB3ED0D004F13AF /* MondayUIDesignView.swift */; };
+		18D951A52CB5168F00200DCE /* TuesdayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D951A42CB5168F00200DCE /* TuesdayUIDesignView.swift */; };
+		18D951A72CB57F2400200DCE /* TuesdayUIDesignDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D951A62CB57F2400200DCE /* TuesdayUIDesignDataModel.swift */; };
+		18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D951A82CB57F3000200DCE /* TuesdayUIDesignViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		186FEF042CB3ECA5004F13AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		186FEF072CB3ECA5004F13AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		186FEF0F2CB3ED0D004F13AF /* MondayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayUIDesignView.swift; sourceTree = "<group>"; };
+		18D951A42CB5168F00200DCE /* TuesdayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignView.swift; sourceTree = "<group>"; };
+		18D951A62CB57F2400200DCE /* TuesdayUIDesignDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignDataModel.swift; sourceTree = "<group>"; };
+		18D951A82CB57F3000200DCE /* TuesdayUIDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 				186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */,
 				186FEF022CB3ECA0004F13AF /* ContentView.swift */,
 				186FEF0E2CB3ECE8004F13AF /* Monday Task */,
+				18D951A32CB5166000200DCE /* Tuesday Task */,
 				186FEF042CB3ECA5004F13AF /* Assets.xcassets */,
 				186FEF062CB3ECA5004F13AF /* Preview Content */,
 			);
@@ -76,6 +83,16 @@
 				186FEF0F2CB3ED0D004F13AF /* MondayUIDesignView.swift */,
 			);
 			path = "Monday Task";
+			sourceTree = "<group>";
+		};
+		18D951A32CB5166000200DCE /* Tuesday Task */ = {
+			isa = PBXGroup;
+			children = (
+				18D951A62CB57F2400200DCE /* TuesdayUIDesignDataModel.swift */,
+				18D951A42CB5168F00200DCE /* TuesdayUIDesignView.swift */,
+				18D951A82CB57F3000200DCE /* TuesdayUIDesignViewModel.swift */,
+			);
+			path = "Tuesday Task";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +167,10 @@
 			files = (
 				186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */,
 				186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */,
+				18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */,
+				18D951A52CB5168F00200DCE /* TuesdayUIDesignView.swift in Sources */,
 				186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */,
+				18D951A72CB57F2400200DCE /* TuesdayUIDesignDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
