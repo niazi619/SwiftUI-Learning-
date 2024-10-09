@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186B61A02CB6D58E00EBE726 /* WednesdayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B619F2CB6D58E00EBE726 /* WednesdayUIDesignView.swift */; };
 		186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */; };
 		186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF022CB3ECA0004F13AF /* ContentView.swift */; };
 		186FEF052CB3ECA5004F13AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186FEF042CB3ECA5004F13AF /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186B619F2CB6D58E00EBE726 /* WednesdayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignView.swift; sourceTree = "<group>"; };
 		186FEEFD2CB3ECA0004F13AF /* SwiftUI-Designing-Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Designing-Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Designing_LearningApp.swift; sourceTree = "<group>"; };
 		186FEF022CB3ECA0004F13AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186B619E2CB69CCD00EBE726 /* Wednesday Task */ = {
+			isa = PBXGroup;
+			children = (
+				186B619F2CB6D58E00EBE726 /* WednesdayUIDesignView.swift */,
+			);
+			path = "Wednesday Task";
+			sourceTree = "<group>";
+		};
 		186FEEF42CB3EC9F004F13AF = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 				186FEF022CB3ECA0004F13AF /* ContentView.swift */,
 				186FEF0E2CB3ECE8004F13AF /* Monday Task */,
 				18D951A32CB5166000200DCE /* Tuesday Task */,
+				186B619E2CB69CCD00EBE726 /* Wednesday Task */,
 				186FEF042CB3ECA5004F13AF /* Assets.xcassets */,
 				186FEF062CB3ECA5004F13AF /* Preview Content */,
 			);
@@ -168,6 +179,7 @@
 				186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */,
 				186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */,
 				18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */,
+				186B61A02CB6D58E00EBE726 /* WednesdayUIDesignView.swift in Sources */,
 				18D951A52CB5168F00200DCE /* TuesdayUIDesignView.swift in Sources */,
 				186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */,
 				18D951A72CB57F2400200DCE /* TuesdayUIDesignDataModel.swift in Sources */,

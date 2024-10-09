@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct TuesdayUIDesignDataModel{
+struct TuesdayUIDesignDataModel: Identifiable ,Hashable{
     
+    var id: String = UUID().uuidString
     var Text: String?
-    
+    var isChecked: Bool = false
 }
