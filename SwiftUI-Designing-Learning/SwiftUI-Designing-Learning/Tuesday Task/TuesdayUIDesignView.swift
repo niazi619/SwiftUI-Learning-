@@ -81,7 +81,7 @@ struct TuesdayUIDesignView: View {
                     Text("")
                 }
                 .tint(
-                    colorLiteralModifier(1, 0.7450980392, 0.7529411765)
+                    Color("customLightPink")
                 )
                 .scaleEffect(1.2)
                 .frame(width: 45 ,height: 50)
@@ -93,7 +93,7 @@ struct TuesdayUIDesignView: View {
             .frame(width: 365 , height: 50)
 
             Rectangle().fill(
-                colorLiteralModifier(0.2156862745, 0.2156862745, 0.2470588235)
+                Color("customGray")
             )
             .frame(width: 365 , height: 1)
 
@@ -161,7 +161,7 @@ struct TuesdayUIDesignView: View {
                             Image(systemName: "checkmark")
                                 .resizable()
                                 .customModifier1(nil, nil, nil, 21, 15,
-                                                 colorLiteralModifier(0.8705882353, 0.6274509804, 0.6352941176))
+                                                 Color("customLightPink"))
                                 .opacity(vm.dataList[index].isChecked ? 1 : 0)
                         }
                         .padding(.horizontal)
@@ -174,7 +174,7 @@ struct TuesdayUIDesignView: View {
                         }
                         
                         Rectangle().fill(
-                            colorLiteralModifier(0.2156862745, 0.2156862745, 0.2470588235)
+                            Color("customGray")
                         )
                         .frame(width: 365 , height: 1)
                         

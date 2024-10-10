@@ -128,39 +128,39 @@ struct MondayUIDesignView: View {
             VStack(alignment: .leading){
                 
                 Text("Yearly")
-                    .customModifier1(29, .heavy, .default, nil, nil, colorLiteralModifier(1, 0.8705882353, 0.8156862745))
+                    .customModifier1(29, .heavy, .default, nil, nil, Color("customBisque"))
                 
                 Text("$14.99")
-                    .customModifier1(22, .regular, .default, nil, nil, colorLiteralModifier(0.7333333333, 0.7333333333, 0.7333333333))
+                    .customModifier1(22, .regular, .default, nil, nil, Color("customMediumGray"))
                     .padding(.bottom,4)
 
                 Text("Free 7-day Trial.")
-                    .customModifier1(15, .medium, .default, nil, 30,  colorLiteralModifier(0.6117647059, 0.6117647059, 0.6117647059))
+                    .customModifier1(15, .medium, .default, nil, 30,  Color("customSpanishGray"))
                     .padding(.bottom,4)
 
                 Text("SELECTED")
-                    .customModifier1(17,.medium,.default, nil, nil, colorLiteralModifier(0.9294117647, 0.8078431373, 0.7568627451))
+                    .customModifier1(17,.medium,.default, nil, nil, Color("customBisque2"))
                     .overlay( RoundedRectangle(cornerRadius:5) .stroke(
-                        colorLiteralModifier(0.9294117647, 0.8078431373, 0.7568627451), lineWidth: 2)
+                        Color("customBisque2"), lineWidth: 2)
                         .frame(width: 95 ,height: 25))
                     .offset(x:15)
 
                 Rectangle()
                     .fill(
-                        colorLiteralModifier(0.3647058824, 0.3176470588, 0.2980392157)
+                        Color("custom5D514C")
                     )
                     .frame(width: 130 ,height: 2)
                     .padding(.bottom)
 
                 Text("Forever")
-                    .customModifier1(29, .heavy, .default, nil, nil, colorLiteralModifier(1, 0.8705882353, 0.8156862745))
+                    .customModifier1(29, .heavy, .default, nil, nil, Color("customBisque"))
 
                 Text("$49.99")
-                    .customModifier1(22, .regular, .default, nil, nil, colorLiteralModifier(0.7333333333, 0.7333333333, 0.7333333333))
+                    .customModifier1(22, .regular, .default, nil, nil, Color("customMediumGray"))
                     .padding(.bottom,4)
 
                 Text("One Time Purchase.")
-                    .customModifier1(15, .medium, .default, nil, 30,  colorLiteralModifier(0.6117647059, 0.6117647059, 0.6117647059))
+                    .customModifier1(15, .medium, .default, nil, 30,  Color("customSpanishGray"))
                     .padding(.bottom,4)
 
 
@@ -169,7 +169,7 @@ struct MondayUIDesignView: View {
 
             Rectangle()
                 .fill(
-                    colorLiteralModifier(0.937254902, 0.7882352941, 0.7411764706)
+                    Color("customBisque")
                 )
                 .frame(width: 2 ,height: 310)
 
@@ -190,7 +190,7 @@ struct MondayUIDesignView: View {
         .customModifier2(350, 350, Color.black, nil, 30)
         .overlay( RoundedRectangle(cornerRadius: 30)
             .stroke(
-                colorLiteralModifier(0.937254902, 0.7882352941, 0.7411764706),
+                Color("customBisque"),
                 lineWidth: 2
             ))
         .padding(40)
@@ -210,7 +210,7 @@ struct MondayUIDesignView: View {
                     .background(Color.black.cornerRadius(60))
                     .overlay(RoundedRectangle(cornerRadius: 60)
                         .stroke(
-                            colorLiteralModifier(0, 0.8235294118, 0.8196078431),
+                            Color("customDarkCyan"),
                             lineWidth: 2
                         ))
             })
