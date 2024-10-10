@@ -10,7 +10,7 @@ import SwiftUI
 struct TuesdayUIDesignView: View {
 
     @State var toggle: Bool = false
-//    @State var selectedTime = Date()
+    @State var selectedTime = Date()
     @State var selectedHour: Int = 12
     @State var selectedMinute: Int = 0
     @State var amPmChange: Bool = false
@@ -28,19 +28,24 @@ struct TuesdayUIDesignView: View {
                 .ignoresSafeArea()
             Color.black.opacity(0.75).ignoresSafeArea()
             
-            Form {
-                Section(header: headerButton) {
-                    firstLabel
-                }
-                .listRowBackground(Color.clear)
+            VStack(spacing: 0){
+                // Make Header Button Static or outSide of Form scrollView.
+                headerButton
                 
-                Section {
-                    secondLabel
+                Form {
+                    Section {
+                        firstLabel
+                    }
+                    .listRowBackground(Color.clear)
+                    
+                    Section {
+                        secondLabel
+                    }
+                    .listRowBackground(Color.clear)
                 }
-                .listRowBackground(Color.clear)
+                .scrollContentBackground(.hidden)
+                .frame(width: 400)
             }
-            .scrollContentBackground(.hidden)
-            .frame(width: 400)
 
         }
 
@@ -59,8 +64,7 @@ struct TuesdayUIDesignView: View {
 
         }
         .padding()
-        .offset(x:-40)
-
+        .offset(x:50)
     }
 
     var firstLabel: some View{
@@ -98,45 +102,18 @@ struct TuesdayUIDesignView: View {
                     .customModifier1(18, .regular, .default, nil, 50, .white)
 
                 Spacer()
-
-                VStack{
                     
                     HStack(spacing: 0){
                         
-                        Picker("Hour", selection: $selectedHour) {
-                            ForEach(hours, id: \.self) { hour in
-                                Text("\(hour)").tag(hour)
-                            }
-                        }
-                        .pickerStyle(MenuPickerStyle())
-                        .accentColor(.white)
-                        .pickerStyle(MenuPickerStyle())
-                        
-                        Text(":")
-                            .customModifier1(18, .regular, .default, 5, 45, .white)
-                        
-                        Picker("Minute", selection: $selectedMinute) {
-                            ForEach(minutes, id: \.self) { minute in
-                                Text(String(format: "%02d", minute)).tag(minute)
-                            }
-                        }
-                        .pickerStyle(MenuPickerStyle())
-                        .accentColor(.white)
-                        .pickerStyle(MenuPickerStyle())
-                        .offset(x:-15)
+                        DatePicker("Select the time", selection: $selectedTime ,displayedComponents: .hourAndMinute)
+                            .labelsHidden()
+                            .colorInvert()
+//                            .colorScheme(.dark)
+//                            .accentColor(Color.white)
+                            .datePickerStyle(CompactDatePickerStyle())
                         
                     }
                     .customModifier2(90, 35, Color.gray, 0.3, 8)
-                    
-                }
-                // AM/PM Toggle
-                Picker("AM/PM", selection: $isAM) {
-                    Text("AM").tag(true)
-                    Text("PM").tag(false)
-                }
-                .pickerStyle(SegmentedPickerStyle()) // Segmented style for AM/PM
-                .customModifier2(90, 35, Color.gray, 0.3, 8)
-
 
             }
             .padding()
@@ -147,15 +124,6 @@ struct TuesdayUIDesignView: View {
         .padding()
         .customModifier2(365, 115, Color.gray, 0.1, 20)
 
-    }
-    // Hour range from 1 to 12
-    private var hours: [Int] {
-        Array(1...12)
-    }
-    
-    // Minute range from 0 to 59
-    private var minutes: [Int] {
-        Array(0...59)
     }
     
     private var formattedTime: String {
@@ -179,39 +147,43 @@ struct TuesdayUIDesignView: View {
     var secondLabel: some View{
 
         VStack{
-
-            ScrollView{
+            
+            VStack{
                 ForEach(vm.dataList.indices, id: \.self){ index in
-
-                    HStack{
-                        Text("\(vm.dataList[index].Text ?? "")")
-                            .customModifier1(18, .regular, .default, nil, 50, .white)
-
-                        Spacer()
-
-                        Image(systemName: "checkmark")
-                            .resizable()
-                            .customModifier1(nil, nil, nil, 21, 15,
-                                             colorLiteralModifier(0.8705882353, 0.6274509804, 0.6352941176))
-                            .opacity(vm.dataList[index].isChecked ? 1 : 0)
-                    }
-                    .padding()
-                    .frame(width: 365 , height: 35)
-                    .onTapGesture {
-                        withAnimation(){
-                            vm.dataList[index].isChecked.toggle()
+                    
+                    VStack{
+                        HStack{
+                            Text("\(vm.dataList[index].Text ?? "")")
+                                .customModifier1(18, .regular, .default, nil, 50, .white)
+                            
+                            Spacer()
+                            
+                            Image(systemName: "checkmark")
+                                .resizable()
+                                .customModifier1(nil, nil, nil, 21, 15,
+                                                 colorLiteralModifier(0.8705882353, 0.6274509804, 0.6352941176))
+                                .opacity(vm.dataList[index].isChecked ? 1 : 0)
                         }
+                        .padding(.horizontal)
+                        .frame(width: 365 , height: 35)
+                        .background(Color.black.opacity(0.01))
+                        .onTapGesture {
+                            withAnimation(){
+                                vm.dataList[index].isChecked.toggle()
+                            }
+                        }
+                        
+                        Rectangle().fill(
+                            colorLiteralModifier(0.2156862745, 0.2156862745, 0.2470588235)
+                        )
+                        .frame(width: 365 , height: 1)
+                        
                     }
-
-                    Rectangle().fill(
-                        colorLiteralModifier(0.2156862745, 0.2156862745, 0.2470588235)
-                    )
-                    .frame(width: 365 , height: 1)
-
+                    
                 }
             }
             .padding()
-            .customModifier2(365, 170, Color.gray, 0.1, 20)
+            .customModifier2(365, nil, Color.gray, 0.1, 20)
 
             Text("You can choose up to 5 events or streaks to add to your daily alert")
                 .customModifier1(13, .regular, .default, 350, nil, .gray)
