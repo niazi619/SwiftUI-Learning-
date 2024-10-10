@@ -9,7 +9,7 @@ import SwiftUI
 
 // Custom View Modifier
 
-struct CustomModifier1: ViewModifier{
+struct FontForegroundColorModifier: ViewModifier{
    
     var fontSize: CGFloat?
     var fontWeight: Font.Weight?
@@ -27,7 +27,7 @@ struct CustomModifier1: ViewModifier{
     
 }
 
-struct CustomModifier2: ViewModifier{
+struct FrameBackgroundColorModifier: ViewModifier{
    
     var width: CGFloat?
     var height: CGFloat?
@@ -44,12 +44,12 @@ struct CustomModifier2: ViewModifier{
 }
 
 extension View{
-    func customModifier1(_ fontSize: CGFloat? ,_ fontWeight: Font.Weight? , _ fontDesign: Font.Design? ,_ width: CGFloat? ,_ height: CGFloat? ,_ foregroundColor: Color?) -> some View {
-        self.modifier(CustomModifier1(fontSize: fontSize ,fontWeight: fontWeight ,fontDesign: fontDesign , width: width ,height: height, foregroundColor: foregroundColor))
+    func FontForegroundColorModifier(_ fontSize: CGFloat? ,_ fontWeight: Font.Weight? , _ fontDesign: Font.Design? ,_ width: CGFloat? ,_ height: CGFloat? ,_ foregroundColor: Color?) -> some View {
+        self.modifier(SwiftUI_Designing_Learning.FontForegroundColorModifier(fontSize: fontSize ,fontWeight: fontWeight ,fontDesign: fontDesign , width: width ,height: height, foregroundColor: foregroundColor))
     }
     
-    func customModifier2(_ width: CGFloat? ,_ height: CGFloat? ,_ backgroundColor: Color? ,_ opacity: Double? ,_ cornerRadius: CGFloat?) -> some View {
-        self.modifier(CustomModifier2(width: width ,height: height ,backgroundColor: backgroundColor ,opacity: opacity ,cornerRadius: cornerRadius))
+    func FrameBackgroundColorModifier(_ width: CGFloat? ,_ height: CGFloat? ,_ backgroundColor: Color? ,_ opacity: Double? ,_ cornerRadius: CGFloat?) -> some View {
+        self.modifier(SwiftUI_Designing_Learning.FrameBackgroundColorModifier(width: width ,height: height ,backgroundColor: backgroundColor ,opacity: opacity ,cornerRadius: cornerRadius))
     }
     
 }
@@ -115,7 +115,7 @@ struct MondayUIDesignView: View {
 
             Image(systemName: "infinity")
                 .resizable()
-                .customModifier1(nil,nil,nil, 90, 40, .white)
+                .FontForegroundColorModifier(nil,nil,nil, 90, 40, .white)
 
         }
         .padding(.top,10)
@@ -128,39 +128,37 @@ struct MondayUIDesignView: View {
             VStack(alignment: .leading){
                 
                 Text("Yearly")
-                    .customModifier1(29, .heavy, .default, nil, nil, Color("customBisque"))
+                    .FontForegroundColorModifier(29, .heavy, .default, nil, nil, Color("customBisque"))
                 
                 Text("$14.99")
-                    .customModifier1(22, .regular, .default, nil, nil, Color("customMediumGray"))
+                    .FontForegroundColorModifier(22, .regular, .default, nil, nil, Color("customMediumGray"))
                     .padding(.bottom,4)
 
                 Text("Free 7-day Trial.")
-                    .customModifier1(15, .medium, .default, nil, 30,  Color("customSpanishGray"))
+                    .FontForegroundColorModifier(15, .medium, .default, nil, 30, Color("customSpanishGray"))
                     .padding(.bottom,4)
 
                 Text("SELECTED")
-                    .customModifier1(17,.medium,.default, nil, nil, Color("customBisque2"))
+                    .FontForegroundColorModifier(17,.medium,.default, nil, nil, Color("customBisque2"))
                     .overlay( RoundedRectangle(cornerRadius:5) .stroke(
                         Color("customBisque2"), lineWidth: 2)
                         .frame(width: 95 ,height: 25))
                     .offset(x:15)
 
                 Rectangle()
-                    .fill(
-                        Color("custom5D514C")
-                    )
+                    .fill(Color("custom5D514C"))
                     .frame(width: 130 ,height: 2)
                     .padding(.bottom)
 
                 Text("Forever")
-                    .customModifier1(29, .heavy, .default, nil, nil, Color("customBisque"))
+                    .FontForegroundColorModifier(29, .heavy, .default, nil, nil, Color("customBisque"))
 
                 Text("$49.99")
-                    .customModifier1(22, .regular, .default, nil, nil, Color("customMediumGray"))
+                    .FontForegroundColorModifier(22, .regular, .default, nil, nil, Color("customMediumGray"))
                     .padding(.bottom,4)
 
                 Text("One Time Purchase.")
-                    .customModifier1(15, .medium, .default, nil, 30,  Color("customSpanishGray"))
+                    .FontForegroundColorModifier(15, .medium, .default, nil, 30,  Color("customSpanishGray"))
                     .padding(.bottom,4)
 
 
@@ -168,31 +166,27 @@ struct MondayUIDesignView: View {
             .frame(width: 150)
 
             Rectangle()
-                .fill(
-                    Color("customBisque")
-                )
+                .fill(Color("customBisque"))
                 .frame(width: 2 ,height: 310)
 
             VStack(alignment: .leading ,spacing: 45){
 
                 Text("A breathtaking time tracking tool that increases productivity   and motivation")
-                    .customModifier1(20, .regular, .default, nil, nil, .white)
+                    .FontForegroundColorModifier(20, .regular, .default, nil, nil, .white)
 
                 Button(action: {}, label: {
                     Text("Learn more >")
-                        .customModifier1(17, .light, .default, nil, nil, .gray)
+                        .FontForegroundColorModifier(17, .light, .default, nil, nil, .gray)
                 })
             }
             .frame(width: 150)
 
         }
         .padding()
-        .customModifier2(350, 350, Color.black, nil, 30)
+        .FrameBackgroundColorModifier(350, 350, Color.black, nil, 30)
         .overlay( RoundedRectangle(cornerRadius: 30)
-            .stroke(
-                Color("customBisque"),
-                lineWidth: 2
-            ))
+            .stroke(Color("customBisque"),
+                lineWidth: 2))
         .padding(40)
 
     }
@@ -206,17 +200,15 @@ struct MondayUIDesignView: View {
             }, label: {
                 Text("Try Free & Subscribe")
                     .padding()
-                    .customModifier1(28, .regular, .default, 350, 90, .white)
+                    .FontForegroundColorModifier(28, .regular, .default, 350, 90, .white)
                     .background(Color.black.cornerRadius(60))
                     .overlay(RoundedRectangle(cornerRadius: 60)
-                        .stroke(
-                            Color("customDarkCyan"),
-                            lineWidth: 2
-                        ))
+                        .stroke(Color("customDarkCyan"),
+                            lineWidth: 2))
             })
             
             Text("$14.99 per year after FREE 7-day trial")
-                .customModifier1(15, .regular, .default, nil, nil, .gray)
+                .FontForegroundColorModifier(15, .regular, .default, nil, nil, .gray)
         }
         .padding(.bottom)
         
@@ -230,7 +222,7 @@ struct MondayUIDesignView: View {
                 .padding()
             
             Text("Integer ac interdum lacus. Nunc porta semper lacus a varius. Pellentesque habilant morbi tristique senectus at netus at malesuada fames ac turpis egestas. Nunc sagilitus consectetur velit. ac gravida nunc gravida et. Vesibulum at eros imperdiet. Volutpat nunc vitae. Ornare erat. Proin interdum aliquet porta. Fusce ut semper ligula.")
-                .customModifier1(14, .regular, .default, nil, nil, .white)
+                .FontForegroundColorModifier(14, .regular, .default, nil, nil, .white)
                 .multilineTextAlignment(.center)
                 .lineSpacing(0)
         }

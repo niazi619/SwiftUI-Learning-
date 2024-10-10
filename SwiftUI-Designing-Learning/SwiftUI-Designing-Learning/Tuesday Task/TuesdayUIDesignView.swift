@@ -26,6 +26,7 @@ struct TuesdayUIDesignView: View {
                 .scaledToFill()
                 .blur(radius: 20)
                 .ignoresSafeArea()
+            
             Color.black.opacity(0.75).ignoresSafeArea()
             
             VStack(spacing: 0){
@@ -58,7 +59,7 @@ struct TuesdayUIDesignView: View {
             }, label: {
                 Image(systemName: "chevron.backward")
                     .resizable()
-                    .customModifier1(nil, nil, nil, 10, 20, .white)
+                    .FontForegroundColorModifier(nil, nil, nil, 10, 20, .white)
             })
             Spacer()
 
@@ -73,7 +74,7 @@ struct TuesdayUIDesignView: View {
 
             HStack{
                 Text("Daily Alert")
-                    .customModifier1(18, .regular, .default, nil, 50, .white)
+                    .FontForegroundColorModifier(18, .regular, .default, nil, 50, .white)
 
                 Spacer()
 
@@ -99,7 +100,7 @@ struct TuesdayUIDesignView: View {
 
             HStack{
                 Text("Time")
-                    .customModifier1(18, .regular, .default, nil, 50, .white)
+                    .FontForegroundColorModifier(18, .regular, .default, nil, 50, .white)
 
                 Spacer()
                     
@@ -113,7 +114,7 @@ struct TuesdayUIDesignView: View {
                             .datePickerStyle(CompactDatePickerStyle())
                         
                     }
-                    .customModifier2(90, 35, Color.gray, 0.3, 8)
+                    .FrameBackgroundColorModifier(90, 35, Color.gray, 0.3, 8)
 
             }
             .padding()
@@ -122,7 +123,7 @@ struct TuesdayUIDesignView: View {
 
         }
         .padding()
-        .customModifier2(365, 115, Color.gray, 0.1, 20)
+        .FrameBackgroundColorModifier(365, 115, Color.gray, 0.1, 20)
 
     }
     
@@ -154,13 +155,13 @@ struct TuesdayUIDesignView: View {
                     VStack{
                         HStack{
                             Text("\(vm.dataList[index].Text ?? "")")
-                                .customModifier1(18, .regular, .default, nil, 50, .white)
+                                .FontForegroundColorModifier(18, .regular, .default, nil, 50, .white)
                             
                             Spacer()
                             
                             Image(systemName: "checkmark")
                                 .resizable()
-                                .customModifier1(nil, nil, nil, 21, 15,
+                                .FontForegroundColorModifier(nil, nil, nil, 21, 15,
                                                  Color("customLightPink"))
                                 .opacity(vm.dataList[index].isChecked ? 1 : 0)
                         }
@@ -183,10 +184,10 @@ struct TuesdayUIDesignView: View {
                 }
             }
             .padding()
-            .customModifier2(365, nil, Color.gray, 0.1, 20)
+            .FrameBackgroundColorModifier(365, nil, Color.gray, 0.1, 20)
 
             Text("You can choose up to 5 events or streaks to add to your daily alert")
-                .customModifier1(13, .regular, .default, 350, nil, .gray)
+                .FontForegroundColorModifier(13, .regular, .default, 350, nil, .gray)
                 .padding()
 
         }

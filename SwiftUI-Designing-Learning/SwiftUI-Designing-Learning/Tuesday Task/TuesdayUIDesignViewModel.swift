@@ -16,15 +16,5 @@ class TuesdayUIDesignViewModel: ObservableObject {
         TuesdayUIDesignDataModel(Text: "Doctor's Appointment")
     ]
     
-//    func showCheckMarkMethod(_ obj: TuesdayUIDesignDataModel){
-//        
-//        for i in 0..<dataList.count {
-//            if dataList[i].id == obj.id {
-//                noStore = i
-//                break
-//            }
-//        }
-//        
-//    }
     
 }
