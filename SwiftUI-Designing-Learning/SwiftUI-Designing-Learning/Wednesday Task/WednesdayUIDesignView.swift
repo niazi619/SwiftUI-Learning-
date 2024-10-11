@@ -44,13 +44,13 @@ struct WednesdayUIDesignView: View {
             }, label: {
                 Image(systemName: "chevron.backward")
                     .resizable()
-                    .FontForegroundColorModifier(nil, nil, nil, 15, 30, Color("customGrayishBlue"))
+                    .FontForegroundColorModifier(nil, nil, nil, 13, 26, Color("customGrayishBlue"))
             })
             
             Spacer()
             
             Text("My")
-                .FontForegroundColorModifier(33, .heavy, .default, nil, nil, Color("customRegalBlue"))
+                .FontForegroundColorModifier(30, .heavy, .default, nil, nil, Color("customRegalBlue"))
             
             Spacer()
         }
