@@ -20,6 +20,8 @@
 		18D951A72CB57F2400200DCE /* TuesdayUIDesignDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D951A62CB57F2400200DCE /* TuesdayUIDesignDataModel.swift */; };
 		18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D951A82CB57F3000200DCE /* TuesdayUIDesignViewModel.swift */; };
 		18EBAF582CB808540053D2FE /* WednesdayUIDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBAF572CB808540053D2FE /* WednesdayUIDesignViewModel.swift */; };
+		18F7BDFA2CBCFE1B0015C160 /* FridayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7BDF92CBCFE1B0015C160 /* FridayUIDesignView.swift */; };
+		18F7BDFF2CBD5EC10015C160 /* MondayUIDesignView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7BDFE2CBD5EC10015C160 /* MondayUIDesignView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		18D951A62CB57F2400200DCE /* TuesdayUIDesignDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignDataModel.swift; sourceTree = "<group>"; };
 		18D951A82CB57F3000200DCE /* TuesdayUIDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignViewModel.swift; sourceTree = "<group>"; };
 		18EBAF572CB808540053D2FE /* WednesdayUIDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignViewModel.swift; sourceTree = "<group>"; };
+		18F7BDF92CBCFE1B0015C160 /* FridayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignView.swift; sourceTree = "<group>"; };
+		18F7BDFE2CBD5EC10015C160 /* MondayUIDesignView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayUIDesignView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +84,8 @@
 			children = (
 				186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */,
 				186FEF022CB3ECA0004F13AF /* ContentView.swift */,
-				186FEF0E2CB3ECE8004F13AF /* Monday Task */,
-				18D951A32CB5166000200DCE /* Tuesday Task */,
-				186B619E2CB69CCD00EBE726 /* Wednesday Task */,
-				18854BAA2CB90E2E00DBCCC1 /* Thursday Task */,
+				18F7BDFB2CBD512F0015C160 /* Week 1 */,
+				18F7BDFC2CBD5DF70015C160 /* Week 2 */,
 				186FEF042CB3ECA5004F13AF /* Assets.xcassets */,
 				186FEF062CB3ECA5004F13AF /* Preview Content */,
 			);
@@ -124,6 +126,42 @@
 				18D951A82CB57F3000200DCE /* TuesdayUIDesignViewModel.swift */,
 			);
 			path = "Tuesday Task";
+			sourceTree = "<group>";
+		};
+		18F7BDF82CBCFDF10015C160 /* Friday Task */ = {
+			isa = PBXGroup;
+			children = (
+				18F7BDF92CBCFE1B0015C160 /* FridayUIDesignView.swift */,
+			);
+			path = "Friday Task";
+			sourceTree = "<group>";
+		};
+		18F7BDFB2CBD512F0015C160 /* Week 1 */ = {
+			isa = PBXGroup;
+			children = (
+				186FEF0E2CB3ECE8004F13AF /* Monday Task */,
+				18D951A32CB5166000200DCE /* Tuesday Task */,
+				186B619E2CB69CCD00EBE726 /* Wednesday Task */,
+				18854BAA2CB90E2E00DBCCC1 /* Thursday Task */,
+				18F7BDF82CBCFDF10015C160 /* Friday Task */,
+			);
+			path = "Week 1";
+			sourceTree = "<group>";
+		};
+		18F7BDFC2CBD5DF70015C160 /* Week 2 */ = {
+			isa = PBXGroup;
+			children = (
+				18F7BDFD2CBD5E8B0015C160 /* Monday Task */,
+			);
+			path = "Week 2";
+			sourceTree = "<group>";
+		};
+		18F7BDFD2CBD5E8B0015C160 /* Monday Task */ = {
+			isa = PBXGroup;
+			children = (
+				18F7BDFE2CBD5EC10015C160 /* MondayUIDesignView2.swift */,
+			);
+			path = "Monday Task";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */,
+				18F7BDFF2CBD5EC10015C160 /* MondayUIDesignView2.swift in Sources */,
 				18854BAC2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift in Sources */,
 				186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */,
 				18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */,
@@ -205,6 +244,7 @@
 				186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */,
 				18B2CDDB2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift in Sources */,
 				18B2CDDD2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift in Sources */,
+				18F7BDFA2CBCFE1B0015C160 /* FridayUIDesignView.swift in Sources */,
 				18EBAF582CB808540053D2FE /* WednesdayUIDesignViewModel.swift in Sources */,
 				18D951A72CB57F2400200DCE /* TuesdayUIDesignDataModel.swift in Sources */,
 			);

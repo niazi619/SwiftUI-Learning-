@@ -24,16 +24,14 @@ struct ThursdayUIDesignView: View {
 //                endRadius: 300)
                 .ignoresSafeArea()
             
-            VStack(spacing: 20){
+            VStack(spacing: 30){
                 header
                 
                 tabView
                 
                 appleSignInButton
-                
-                Spacer()
             }
-            .padding(.top)
+            .padding(.bottom,140)
             
         }
         
