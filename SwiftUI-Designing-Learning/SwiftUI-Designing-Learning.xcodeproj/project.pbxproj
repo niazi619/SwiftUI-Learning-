@@ -14,6 +14,9 @@
 		186FEF082CB3ECA5004F13AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186FEF072CB3ECA5004F13AF /* Preview Assets.xcassets */; };
 		186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF0F2CB3ED0D004F13AF /* MondayUIDesignView.swift */; };
 		18854BAC2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18854BAB2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift */; };
+		189E9EF02CBE524400BA17BA /* TuesdayUIDesignView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EEF2CBE524400BA17BA /* TuesdayUIDesignView2.swift */; };
+		189E9EF22CBE91BC00BA17BA /* TuesdayUIDesign2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EF12CBE91BC00BA17BA /* TuesdayUIDesign2ViewModel.swift */; };
+		189E9EF52CBEA45500BA17BA /* WednesdayUIDesignView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EF42CBEA45500BA17BA /* WednesdayUIDesignView2.swift */; };
 		18B2CDDB2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CDDA2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift */; };
 		18B2CDDD2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CDDC2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift */; };
 		18D951A52CB5168F00200DCE /* TuesdayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D951A42CB5168F00200DCE /* TuesdayUIDesignView.swift */; };
@@ -33,6 +36,9 @@
 		186FEF072CB3ECA5004F13AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		186FEF0F2CB3ED0D004F13AF /* MondayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayUIDesignView.swift; sourceTree = "<group>"; };
 		18854BAB2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignView.swift; sourceTree = "<group>"; };
+		189E9EEF2CBE524400BA17BA /* TuesdayUIDesignView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignView2.swift; sourceTree = "<group>"; };
+		189E9EF12CBE91BC00BA17BA /* TuesdayUIDesign2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesign2ViewModel.swift; sourceTree = "<group>"; };
+		189E9EF42CBEA45500BA17BA /* WednesdayUIDesignView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignView2.swift; sourceTree = "<group>"; };
 		18B2CDDA2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignViewModel.swift; sourceTree = "<group>"; };
 		18B2CDDC2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignDataModel.swift; sourceTree = "<group>"; };
 		18D951A42CB5168F00200DCE /* TuesdayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignView.swift; sourceTree = "<group>"; };
@@ -118,6 +124,23 @@
 			path = "Thursday Task";
 			sourceTree = "<group>";
 		};
+		189E9EEE2CBE521C00BA17BA /* Tuesday Task */ = {
+			isa = PBXGroup;
+			children = (
+				189E9EEF2CBE524400BA17BA /* TuesdayUIDesignView2.swift */,
+				189E9EF12CBE91BC00BA17BA /* TuesdayUIDesign2ViewModel.swift */,
+			);
+			path = "Tuesday Task";
+			sourceTree = "<group>";
+		};
+		189E9EF32CBEA42400BA17BA /* Wednesday Task */ = {
+			isa = PBXGroup;
+			children = (
+				189E9EF42CBEA45500BA17BA /* WednesdayUIDesignView2.swift */,
+			);
+			path = "Wednesday Task";
+			sourceTree = "<group>";
+		};
 		18D951A32CB5166000200DCE /* Tuesday Task */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				18F7BDFD2CBD5E8B0015C160 /* Monday Task */,
+				189E9EEE2CBE521C00BA17BA /* Tuesday Task */,
+				189E9EF32CBEA42400BA17BA /* Wednesday Task */,
 			);
 			path = "Week 2";
 			sourceTree = "<group>";
@@ -234,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189E9EF52CBEA45500BA17BA /* WednesdayUIDesignView2.swift in Sources */,
 				186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */,
 				18F7BDFF2CBD5EC10015C160 /* MondayUIDesignView2.swift in Sources */,
 				18854BAC2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift in Sources */,
@@ -241,8 +267,10 @@
 				18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */,
 				186B61A02CB6D58E00EBE726 /* WednesdayUIDesignView.swift in Sources */,
 				18D951A52CB5168F00200DCE /* TuesdayUIDesignView.swift in Sources */,
+				189E9EF02CBE524400BA17BA /* TuesdayUIDesignView2.swift in Sources */,
 				186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */,
 				18B2CDDB2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift in Sources */,
+				189E9EF22CBE91BC00BA17BA /* TuesdayUIDesign2ViewModel.swift in Sources */,
 				18B2CDDD2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift in Sources */,
 				18F7BDFA2CBCFE1B0015C160 /* FridayUIDesignView.swift in Sources */,
 				18EBAF582CB808540053D2FE /* WednesdayUIDesignViewModel.swift in Sources */,

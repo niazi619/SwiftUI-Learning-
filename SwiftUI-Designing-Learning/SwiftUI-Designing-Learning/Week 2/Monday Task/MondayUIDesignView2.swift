@@ -30,7 +30,7 @@ struct MondayUIDesignView2: View {
                 bodyView
                 
                 Spacer()
-                buttonView
+                NextButtonView()
                 
             }
             
@@ -100,21 +100,25 @@ struct MondayUIDesignView2: View {
         .offset(y:-15)
     }
     
-    var buttonView: some View{
-        Button(action: {
-            
-        }, label: {
-            Text("NEXT")
-                .FontForegroundColorModifier(15, .bold, .default, 355, 55, .white)
-                .FrameBackgroundColorModifier(355, 55, (Color("customBlackPearl")), 1, 1)
-                .padding(.bottom)
-        })
-    }
-    
 }
 
 struct MondayUIDesignView2_Previews: PreviewProvider {
     static var previews: some View {
         MondayUIDesignView2()
     }
+}
+
+struct NextButtonView: View {
+    
+    var body: some View {
+        Button(action: {
+            
+        }, label: {
+            Text("NEXT")
+                .FontForegroundColorModifier(15, .heavy, .default, 355, 55, .white)
+                .FrameBackgroundColorModifier(355, 55, (Color("customBlackPearl")), 1, 1)
+                .padding(.bottom)
+        })
+    }
+    
 }
