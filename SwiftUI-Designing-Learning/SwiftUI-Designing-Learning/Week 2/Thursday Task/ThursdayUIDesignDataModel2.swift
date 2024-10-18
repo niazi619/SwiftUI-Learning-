@@ -15,3 +15,11 @@ struct ThursdayUIDesignDataModel2: Identifiable {
     var lock: Bool
     
 }
+
+struct ArraysDataModel: Identifiable {
+    
+    var id: String = UUID().uuidString
+    var arrayName: String
+    var arrays: [ThursdayUIDesignDataModel2]
+    
+}

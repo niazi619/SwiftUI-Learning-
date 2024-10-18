@@ -22,11 +22,12 @@ struct ThursdayUIDesignView2: View {
                     searchView
                     
                     ScrollView{
-                        VStack(spacing: 50) {
+                        VStack(spacing: 40) {
                             
-                            forYouDataListView
-                            freeTodayDataListView
-                            mostPopularDataListView
+                            dataListView
+//                            forYouDataListView
+//                            freeTodayDataListView
+//                            mostPopularDataListView
                         }
                     }
                     
@@ -70,160 +71,59 @@ struct ThursdayUIDesignView2: View {
 
     }
     
-    var forYouDataListView: some  View {
-        VStack(alignment: .leading ,spacing: 10){
-            
-            Text("For You")
-                .FontForegroundColorModifier(24, .semibold, .default, nil, nil, .black)
-            
-            ScrollView(.horizontal) {
+    var dataListView: some  View {
+        
+        ForEach(vm.dataList.indices) { index in
+            VStack(alignment: .leading ,spacing: 10){
                 
-                LazyHGrid(rows: vm.rows ,spacing: 10) {
-                    ForEach(vm.forYouDataList) { obj in
-                        
-                        HStack{
+                Text(vm.dataList[index].arrayName)
+                    .FontForegroundColorModifier(24, .semibold, .default, nil, nil, .black)
+                
+                ScrollView(.horizontal) {
+                    
+                    LazyHGrid(rows: vm.rows ,spacing: 10) {
+                        ForEach(vm.dataList[index].arrays) { obj in
                             
-                            VStack{
-                                Text(obj.name)
-                                    .FontForegroundColorModifier(17, .light, .default, nil, nil, .black)
+                            HStack{
                                 
-                                Spacer()
-                            }
-                            .padding([.top,.leading])
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 20) {
-                                Image(systemName: obj.image)
-                                    .resizable()
-                                    .FontForegroundColorModifier(20, .light, .default, 28, 28, .black)
-                                    .padding(obj.lock == true ? .trailing : [.top ,.trailing])
-                                
-                                if obj.lock == true {
-                                    Image(systemName: "lock.fill")
-                                        .resizable()
-                                        .FontForegroundColorModifier(22, .light, .default, 15, 19, .gray)
-                                }else{
+                                VStack{
+                                    Text(obj.name)
+                                        .FontForegroundColorModifier(17, .light, .default, nil, nil, .black)
+                                    
                                     Spacer()
                                 }
+                                .padding([.top,.leading])
+                                
+                                Spacer()
+                                
+                                VStack(spacing: 20) {
+                                    Image(systemName: obj.image)
+                                        .resizable()
+                                        .FontForegroundColorModifier(20, .light, .default, 28, 28, .black)
+                                        .padding(obj.lock == true ? .trailing : [.top ,.trailing])
+                                    
+                                    if obj.lock == true {
+                                        Image(systemName: "lock.fill")
+                                            .resizable()
+                                            .FontForegroundColorModifier(22, .light, .default, 15, 19, .gray)
+                                    }else{
+                                        Spacer()
+                                    }
+                                }
+                                
                             }
+                            .FrameBackgroundColorModifier(170, 85, .gray, 0.25, 10)
                             
                         }
-                        .FrameBackgroundColorModifier(175, 90, .gray, 0.25, 10)
                         
                     }
                     
                 }
+                .frame(width: 350 ,height: 180)            .scrollIndicators(.hidden)
                 
             }
-            .frame(width: 360 ,height: 190)
-            .scrollIndicators(.hidden)
-            
         }
-    }
-    
-    var freeTodayDataListView: some  View {
-        VStack(alignment: .leading ,spacing: 10){
-            
-            Text("Free Today")
-                .FontForegroundColorModifier(24, .semibold, .default, nil, nil, .black)
-            
-            ScrollView(.horizontal) {
-                
-                LazyHGrid(rows: vm.rows ,spacing: 10) {
-                    ForEach(vm.freeTodayDataList) { obj in
-                        
-                        HStack{
-                            
-                            VStack{
-                                Text(obj.name)
-                                    .FontForegroundColorModifier(17, .light, .default, nil, nil, .black)
-                                
-                                Spacer()
-                            }
-                            .padding([.top,.leading])
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 20) {
-                                Image(systemName: obj.image)
-                                    .resizable()
-                                    .FontForegroundColorModifier(20, .light, .default, 28, 28, .black)
-                                    .padding(obj.lock == true ? .trailing : [.top ,.trailing])
-                                
-                                if obj.lock == true {
-                                    Image(systemName: "lock.fill")
-                                        .resizable()
-                                        .FontForegroundColorModifier(22, .light, .default, 15, 19, .gray)
-                                }else{
-                                    Spacer()
-                                }
-                            }
-                            
-                        }
-                        .FrameBackgroundColorModifier(175, 90, .gray, 0.25, 10)
-                        
-                    }
-                    
-                }
-                
-            }
-            .frame(width: 360 ,height: 190)
-            .scrollIndicators(.hidden)
-            
-        }
-    }
-    
-    var mostPopularDataListView: some  View {
-        VStack(alignment: .leading ,spacing: 10){
-            
-            Text("Most popular")
-                .FontForegroundColorModifier(24, .semibold, .default, nil, nil, .black)
-            
-            ScrollView(.horizontal) {
-                
-                LazyHGrid(rows: vm.rows ,spacing: 10) {
-                    ForEach(vm.mostPopularDataList) { obj in
-                        
-                        HStack{
-                            
-                            VStack{
-                                Text(obj.name)
-                                    .FontForegroundColorModifier(17, .light, .default, nil, nil, .black)
-                                
-                                Spacer()
-                            }
-                            .padding([.top,.leading])
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 20) {
-                                Image(systemName: obj.image)
-                                    .resizable()
-                                    .FontForegroundColorModifier(20, .light, .default, 28, 28, .black)
-                                    .padding(obj.lock == true ? .trailing : [.top ,.trailing])
-                                
-                                if obj.lock == true {
-                                    Image(systemName: "lock.fill")
-                                        .resizable()
-                                        .FontForegroundColorModifier(22, .light, .default, 15, 19, .gray)
-                                }else{
-                                    Spacer()
-                                }
-                            }
-                            
-                        }
-                        .FrameBackgroundColorModifier(175, 90, .gray, 0.25, 10)
-                        
-                    }
-                    
-                }
-                
-            }
-            .frame(width: 360 ,height: 190)
-            .scrollIndicators(.hidden)
-            
-        }
+        
     }
     
 }
