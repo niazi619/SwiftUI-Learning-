@@ -28,7 +28,7 @@ struct TuesdayUIDesignView2: View {
                 
                 sectionsView
                 
-                NextButtonView()
+                ButtonView(text: "NEXT")
                
             }
             .padding(.horizontal)

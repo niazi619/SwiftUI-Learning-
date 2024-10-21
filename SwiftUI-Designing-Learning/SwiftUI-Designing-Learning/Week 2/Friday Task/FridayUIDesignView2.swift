@@ -8,6 +8,14 @@
 import SwiftUI
 import MapKit
 
+struct Landmark:Identifiable {
+    
+    var id: String = UUID().uuidString
+    var name: String
+    var coordinate: CLLocationCoordinate2D
+    var imageName: String
+}
+
 struct FridayUIDesignView2: View {
     
     @State var index: Int = 1
@@ -15,12 +23,25 @@ struct FridayUIDesignView2: View {
         center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
         span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     
+    
+    let landMarks: [Landmark] = [
+        Landmark(name: "Golden Gate Bridge", coordinate: CLLocationCoordinate2D(latitude: 37.8199, longitude: -122.4783), imageName: "locationLogo"),
+        Landmark(name: "Alcatraz Island", coordinate: CLLocationCoordinate2D(latitude: 37.8267, longitude: -122.4230), imageName: "locationLogo")
+    ]
+    
     var body: some View {
         
         ZStack{
             
-            Map(coordinateRegion: $mapRegion)
-                .ignoresSafeArea()
+            Map(coordinateRegion: $mapRegion ,annotationItems: landMarks){ landmark in
+                MapAnnotation(coordinate: landmark.coordinate) {
+                    Image(landmark.imageName)
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .clipShape(Circle())
+                }
+            }
+            .ignoresSafeArea()
             
             VStack{
                 
