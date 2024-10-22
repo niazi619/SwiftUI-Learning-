@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            MondayUIDesignView3()
+            TuesdayUIDesignView3TabView()
         }
     }
 }

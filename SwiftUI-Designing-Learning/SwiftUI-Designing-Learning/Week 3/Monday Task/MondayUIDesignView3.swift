@@ -118,7 +118,7 @@ struct MondayUIDesignView3: View {
             Text("I need delivery in")
                 .FontForegroundColorModifier(16, .regular, .default, nil, nil,.black)
             
-            HStack(spacing:10){
+            HStack{
                 Text("Now (About 5min)")
                     .FontForegroundColorModifier(12, index == 1 ? .medium : .regular, .default, nil, nil,.black)
                     .FrameBackgroundColorModifier(120, 40, index == 1 ? Color("customGreen") : Color.gray, index == 1 ? 1 : 0.2, 7)
@@ -148,7 +148,7 @@ struct MondayUIDesignView3: View {
             Text("I'll pay by")
                 .FontForegroundColorModifier(16, .regular, .default, nil, nil,.black)
             
-            HStack(spacing:10){
+            HStack{
                 Text("Cash")
                     .FontForegroundColorModifier(12, indexb == 1 ? .medium : .regular, .default, nil, nil,.black)
                     .FrameBackgroundColorModifier(70, 30, indexb == 1 ? Color("customGreen") : Color.gray, indexb == 1 ? 1 : 0.2, 7)
