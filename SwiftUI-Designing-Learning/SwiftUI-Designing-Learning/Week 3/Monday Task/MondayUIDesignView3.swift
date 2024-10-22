@@ -109,6 +109,7 @@ struct MondayUIDesignView3: View {
     
     var messageView: some  View {
         VStack(alignment: .leading ,spacing: 20) {
+            
             Text("Tap a message to send or write your own.")
                 .FontForegroundColorModifier(15, .regular, .default, nil, nil,.black)
                 .padding(20)
@@ -117,10 +118,10 @@ struct MondayUIDesignView3: View {
             Text("I need delivery in")
                 .FontForegroundColorModifier(16, .regular, .default, nil, nil,.black)
             
-            HStack(spacing:0){
+            HStack(spacing:10){
                 Text("Now (About 5min)")
                     .FontForegroundColorModifier(12, index == 1 ? .medium : .regular, .default, nil, nil,.black)
-                    .FrameBackgroundColorModifier(120, 40, index == 1 ? Color("customGreen") : Color.white, 1, 7)
+                    .FrameBackgroundColorModifier(120, 40, index == 1 ? Color("customGreen") : Color.gray, index == 1 ? 1 : 0.2, 7)
                     .onTapGesture {
                         withAnimation(.easeInOut(duration: 0.5)){
                             index = 1
@@ -129,7 +130,7 @@ struct MondayUIDesignView3: View {
                 
                 Text("In 10 Min")
                     .FontForegroundColorModifier(12, index == 2 ? .medium : .regular, .default, nil, nil,.black)
-                    .FrameBackgroundColorModifier(120, 40, index == 2 ? Color("customGreen") : Color.white, 1, 7)
+                    .FrameBackgroundColorModifier(120, 40, index == 2 ? Color("customGreen") : Color.gray, index == 2 ? 1 : 0.2, 7)
                     .onTapGesture {
                         withAnimation(.easeInOut(duration: 0.5)){
                             index = 2
@@ -147,10 +148,10 @@ struct MondayUIDesignView3: View {
             Text("I'll pay by")
                 .FontForegroundColorModifier(16, .regular, .default, nil, nil,.black)
             
-            HStack(spacing:0){
+            HStack(spacing:10){
                 Text("Cash")
                     .FontForegroundColorModifier(12, indexb == 1 ? .medium : .regular, .default, nil, nil,.black)
-                    .FrameBackgroundColorModifier(80, 30, indexb == 1 ? Color("customGreen") : Color.white, 1, 7)
+                    .FrameBackgroundColorModifier(70, 30, indexb == 1 ? Color("customGreen") : Color.gray, indexb == 1 ? 1 : 0.2, 7)
                     .onTapGesture {
                         withAnimation(.easeInOut(duration: 0.5)){
                             indexb = 1
@@ -159,7 +160,7 @@ struct MondayUIDesignView3: View {
                 
                 Text("Stripe")
                     .FontForegroundColorModifier(12, indexb == 2 ? .medium : .regular, .default, nil, nil,.black)
-                    .FrameBackgroundColorModifier(80, 30, indexb == 2 ? Color("customGreen") : Color.white, 1, 7)
+                    .FrameBackgroundColorModifier(70, 30, indexb == 2 ? Color("customGreen") : Color.gray, indexb == 2 ? 1 : 0.2, 7)
                     .onTapGesture {
                         withAnimation(.easeInOut(duration: 0.5)){
                             indexb = 2
@@ -168,7 +169,7 @@ struct MondayUIDesignView3: View {
                 
                 Text("Apple")
                     .FontForegroundColorModifier(12, indexb == 3 ? .medium : .regular, .default, nil, nil,.black)
-                    .FrameBackgroundColorModifier(80, 30, indexb == 3 ? Color("customGreen") : Color.white, 1, 7)
+                    .FrameBackgroundColorModifier(70, 30, indexb == 3 ? Color("customGreen") : Color.gray, indexb == 3 ? 1 : 0.2, 7)
                     .onTapGesture {
                         withAnimation(.easeInOut(duration: 0.5)){
                             indexb = 3
