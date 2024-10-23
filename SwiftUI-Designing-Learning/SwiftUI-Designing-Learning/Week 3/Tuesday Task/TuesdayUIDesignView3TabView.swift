@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TuesdayUIDesignView3TabView: View {
     var body: some View {
-        ZStack{
             TabView{
                 
                 Group{
@@ -43,7 +42,6 @@ struct TuesdayUIDesignView3TabView: View {
             }
             .accentColor(.pink)
             
-        }
         
     }
 }
