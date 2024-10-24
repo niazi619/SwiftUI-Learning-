@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185076972CCA647A00612817 /* ThursdayUIDesignDataModel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185076962CCA647A00612817 /* ThursdayUIDesignDataModel3.swift */; };
+		185076992CCA648B00612817 /* ThursdayUIDesignViewModel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185076982CCA648B00612817 /* ThursdayUIDesignViewModel3.swift */; };
+		1850769B2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850769A2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift */; };
 		186B61A02CB6D58E00EBE726 /* WednesdayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B619F2CB6D58E00EBE726 /* WednesdayUIDesignView.swift */; };
 		186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */; };
 		186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF022CB3ECA0004F13AF /* ContentView.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185076962CCA647A00612817 /* ThursdayUIDesignDataModel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignDataModel3.swift; sourceTree = "<group>"; };
+		185076982CCA648B00612817 /* ThursdayUIDesignViewModel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignViewModel3.swift; sourceTree = "<group>"; };
+		1850769A2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignView3TabView.swift; sourceTree = "<group>"; };
 		186B619F2CB6D58E00EBE726 /* WednesdayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignView.swift; sourceTree = "<group>"; };
 		186FEEFD2CB3ECA0004F13AF /* SwiftUI-Designing-Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Designing-Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Designing_LearningApp.swift; sourceTree = "<group>"; };
@@ -163,7 +169,10 @@
 		187F10792CC93E3D00CDA6F5 /* Thursday Task */ = {
 			isa = PBXGroup;
 			children = (
+				1850769A2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift */,
+				185076962CCA647A00612817 /* ThursdayUIDesignDataModel3.swift */,
 				187F107A2CC93E8F00CDA6F5 /* ThursdayUIDesignView3.swift */,
+				185076982CCA648B00612817 /* ThursdayUIDesignViewModel3.swift */,
 			);
 			path = "Thursday Task";
 			sourceTree = "<group>";
@@ -376,6 +385,8 @@
 				18854BAC2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift in Sources */,
 				18B654A52CC24E4D0008CB0F /* FridayUIDesignView2.swift in Sources */,
 				186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */,
+				185076992CCA648B00612817 /* ThursdayUIDesignViewModel3.swift in Sources */,
+				185076972CCA647A00612817 /* ThursdayUIDesignDataModel3.swift in Sources */,
 				187F10782CC9269400CDA6F5 /* WednesdayUIDesignView3TabView.swift in Sources */,
 				187F107B2CC93E8F00CDA6F5 /* ThursdayUIDesignView3.swift in Sources */,
 				18CCB84F2CC0FAD80052D4A9 /* ThursdayUIDesignViewModel2.swift in Sources */,
@@ -385,6 +396,7 @@
 				187F10742CC9097500CDA6F5 /* WednesdayUIDesignDataModel3.swift in Sources */,
 				18D951A52CB5168F00200DCE /* TuesdayUIDesignView.swift in Sources */,
 				189E9EF02CBE524400BA17BA /* TuesdayUIDesignView2.swift in Sources */,
+				1850769B2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift in Sources */,
 				18DDC0512CC794A800B83001 /* TuesdayUIDesignDataModel3.swift in Sources */,
 				186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */,
 				18947F8C2CBFA38C0002342D /* WednesdayUIDesignViewModel2.swift in Sources */,
