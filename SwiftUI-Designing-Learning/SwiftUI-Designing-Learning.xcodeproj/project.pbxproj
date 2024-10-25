@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185076972CCA647A00612817 /* ThursdayUIDesignDataModel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185076962CCA647A00612817 /* ThursdayUIDesignDataModel3.swift */; };
 		185076992CCA648B00612817 /* ThursdayUIDesignViewModel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185076982CCA648B00612817 /* ThursdayUIDesignViewModel3.swift */; };
 		1850769B2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850769A2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift */; };
+		185E401D2CCB8A0100B7BF02 /* Side menu View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E401C2CCB8A0100B7BF02 /* Side menu View.swift */; };
 		186B61A02CB6D58E00EBE726 /* WednesdayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B619F2CB6D58E00EBE726 /* WednesdayUIDesignView.swift */; };
 		186FEF012CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */; };
 		186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FEF022CB3ECA0004F13AF /* ContentView.swift */; };
@@ -31,6 +31,7 @@
 		18B2CDDB2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CDDA2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift */; };
 		18B2CDDD2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CDDC2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift */; };
 		18B654A52CC24E4D0008CB0F /* FridayUIDesignView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B654A42CC24E4D0008CB0F /* FridayUIDesignView2.swift */; };
+		18C81AF62CCBE5090063C72D /* FridayUIDesignViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C81AF52CCBE5090063C72D /* FridayUIDesignViewModel2.swift */; };
 		18CCB84D2CC0F0F60052D4A9 /* ThursdayUIDesignView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCB84C2CC0F0F60052D4A9 /* ThursdayUIDesignView2.swift */; };
 		18CCB84F2CC0FAD80052D4A9 /* ThursdayUIDesignViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCB84E2CC0FAD80052D4A9 /* ThursdayUIDesignViewModel2.swift */; };
 		18CCB8512CC0FB140052D4A9 /* ThursdayUIDesignDataModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCB8502CC0FB140052D4A9 /* ThursdayUIDesignDataModel2.swift */; };
@@ -48,9 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185076962CCA647A00612817 /* ThursdayUIDesignDataModel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignDataModel3.swift; sourceTree = "<group>"; };
 		185076982CCA648B00612817 /* ThursdayUIDesignViewModel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignViewModel3.swift; sourceTree = "<group>"; };
 		1850769A2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignView3TabView.swift; sourceTree = "<group>"; };
+		185E401C2CCB8A0100B7BF02 /* Side menu View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Side menu View.swift"; sourceTree = "<group>"; };
 		186B619F2CB6D58E00EBE726 /* WednesdayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignView.swift; sourceTree = "<group>"; };
 		186FEEFD2CB3ECA0004F13AF /* SwiftUI-Designing-Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Designing-Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		186FEF002CB3ECA0004F13AF /* SwiftUI_Designing_LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Designing_LearningApp.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		18B2CDDA2CB94F40001390E9 /* ThursdayUIDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignViewModel.swift; sourceTree = "<group>"; };
 		18B2CDDC2CB9502A001390E9 /* ThursdayUIDesignDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignDataModel.swift; sourceTree = "<group>"; };
 		18B654A42CC24E4D0008CB0F /* FridayUIDesignView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignView2.swift; sourceTree = "<group>"; };
+		18C81AF52CCBE5090063C72D /* FridayUIDesignViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignViewModel2.swift; sourceTree = "<group>"; };
 		18CCB84C2CC0F0F60052D4A9 /* ThursdayUIDesignView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignView2.swift; sourceTree = "<group>"; };
 		18CCB84E2CC0FAD80052D4A9 /* ThursdayUIDesignViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignViewModel2.swift; sourceTree = "<group>"; };
 		18CCB8502CC0FB140052D4A9 /* ThursdayUIDesignDataModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignDataModel2.swift; sourceTree = "<group>"; };
@@ -170,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				1850769A2CCA8C0F00612817 /* ThursdayUIDesignView3TabView.swift */,
-				185076962CCA647A00612817 /* ThursdayUIDesignDataModel3.swift */,
 				187F107A2CC93E8F00CDA6F5 /* ThursdayUIDesignView3.swift */,
 				185076982CCA648B00612817 /* ThursdayUIDesignViewModel3.swift */,
 			);
@@ -211,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				18B654A42CC24E4D0008CB0F /* FridayUIDesignView2.swift */,
+				185E401C2CCB8A0100B7BF02 /* Side menu View.swift */,
+				18C81AF52CCBE5090063C72D /* FridayUIDesignViewModel2.swift */,
 			);
 			path = "Friday Task";
 			sourceTree = "<group>";
@@ -386,9 +389,9 @@
 				18B654A52CC24E4D0008CB0F /* FridayUIDesignView2.swift in Sources */,
 				186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */,
 				185076992CCA648B00612817 /* ThursdayUIDesignViewModel3.swift in Sources */,
-				185076972CCA647A00612817 /* ThursdayUIDesignDataModel3.swift in Sources */,
 				187F10782CC9269400CDA6F5 /* WednesdayUIDesignView3TabView.swift in Sources */,
 				187F107B2CC93E8F00CDA6F5 /* ThursdayUIDesignView3.swift in Sources */,
+				185E401D2CCB8A0100B7BF02 /* Side menu View.swift in Sources */,
 				18CCB84F2CC0FAD80052D4A9 /* ThursdayUIDesignViewModel2.swift in Sources */,
 				18DDC0532CC794B900B83001 /* TuesdayUIDesignViewModel3.swift in Sources */,
 				18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */,
@@ -411,6 +414,7 @@
 				18D951A72CB57F2400200DCE /* TuesdayUIDesignDataModel.swift in Sources */,
 				18947F8E2CBFA4040002342D /* WednesdayUIDesignDataModel2.swift in Sources */,
 				18CCB84D2CC0F0F60052D4A9 /* ThursdayUIDesignView2.swift in Sources */,
+				18C81AF62CCBE5090063C72D /* FridayUIDesignViewModel2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

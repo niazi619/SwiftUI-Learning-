@@ -17,13 +17,13 @@ class ThursdayUIDesignViewModel3: ObservableObject {
     
     @Published var imagesDataList: [String] = [
         
-        "baseBallImage1","baseBallImage2","baseBallImage3"
+        "baseBallImage1","baseBallImage2","baseBallImage3","baseBallImage4","baseBallImage5"
         
     ]
     
     @Published var imagesDataList2: [String] = [
         
-        "baseBallImage4","baseBallImage5","baseBallImage6"
+        "baseBallImage6","baseBallImage7","baseBallImage8","baseBallImage9","baseBallImage10"
         
     ]
     

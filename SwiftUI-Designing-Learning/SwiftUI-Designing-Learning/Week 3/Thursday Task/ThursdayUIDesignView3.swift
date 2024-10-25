@@ -28,30 +28,37 @@ struct ThursdayUIDesignView3: View {
                 .offset(x:28 ,y:-350)
             
             
-            VStack(alignment: .leading){
-                
-                profileImageView
-                    .offset(y:-20)
-                
-                VStack(alignment: .leading, spacing: 13) {
+            ScrollView {
+                VStack(alignment: .leading){
                     
-                    profileNameAndTextView
+                    profileImageView
+                        .offset(y:-20)
                     
-                    followAndMessageView
+                    VStack(alignment: .leading, spacing: 13) {
+                        
+                        profileNameAndTextView
+                        
+                        followAndMessageView
+                        
+                        ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
+                            picturesScrollView
+                                .offset(y:60)
+                            
+                            collectionAndPostsView // This bar needs to be stuck .
+                            
+                        }
+                    }
+                    .padding(.horizontal)
+                    .offset(y:-40)
                     
-                    collectionAndPostsView
                     
-                    picturesScrollView
                 }
                 .padding(.horizontal)
-                .offset(y:-40)
-                
-                
+                .frame(width: 400 )
+                .offset(y:45)
+
             }
-            .padding(.horizontal)
-            .frame(width: 400 )
-            .offset(y:50)
-            
+                        
         }
     }
     
@@ -126,41 +133,47 @@ struct ThursdayUIDesignView3: View {
     }
     
     var collectionAndPostsView: some View {
-        HStack{
-            VStack(spacing: 5){
-                
-                Text("Collection")
-                    .FontForegroundColorModifier(16, index == 0 ? .bold : .medium, .rounded, 160, nil, index == 0 ? Color("customDarkCyan") : .gray)
-                    .onTapGesture {
-                        withAnimation(.easeIn){
-                            index = 0
+        
+        GeometryReader { geometry in
+            HStack{
+                VStack(spacing: 5){
+                    
+                    Text("Collection")
+                        .FontForegroundColorModifier(16, index == 0 ? .bold : .medium, .rounded, 160, nil, index == 0 ? Color("customDarkCyan") : .gray)
+                        .onTapGesture {
+                            withAnimation(.easeIn){
+                                index = 0
+                            }
                         }
-                    }
-                Capsule().fill(index == 0 ? Color("customDarkCyan") : Color("customBlue"))
-                    .frame(width: 90 ,height: 1)
-            }
-            
-            VStack(spacing: 5){
+                    Capsule().fill(index == 0 ? Color("customDarkCyan") : Color("customBlue"))
+                        .frame(width: 90 ,height: 1)
+                }
                 
-                Text("Posts")
-                    .FontForegroundColorModifier(16, index == 1 ? .bold : .medium, .rounded, 160, nil, index == 1 ? Color("customDarkCyan") : .gray)
-                    .onTapGesture {
-                        withAnimation(.easeIn){
-                            index = 1
+                VStack(spacing: 5){
+                    
+                    Text("Posts")
+                        .FontForegroundColorModifier(16, index == 1 ? .bold : .medium, .rounded, 160, nil, index == 1 ? Color("customDarkCyan") : .gray)
+                        .onTapGesture {
+                            withAnimation(.easeIn){
+                                index = 1
+                            }
                         }
-                    }
-                Capsule().fill(index == 1 ? Color("customDarkCyan") : Color("customBlue"))
-                    .frame(width: 90 ,height: 1)
+                    Capsule().fill(index == 1 ? Color("customDarkCyan") : Color("customBlue"))
+                        .frame(width: 90 ,height: 1)
+                }
+                
             }
+            .padding(.top,20)
+//            .padding(.bottom,5)
+            .offset(y: geometry.frame(in: .global).minY < 0 ? -geometry.frame(in: .global).minY : 0)
             
         }
-        .padding(.top,30)
-        .padding(.bottom,5)
-
+        .frame(height: 60)
+        
     }
     
     var picturesScrollView: some View {
-        ScrollView {
+//        ScrollView {
             
             HStack(spacing: 10){
                 
@@ -193,7 +206,7 @@ struct ThursdayUIDesignView3: View {
                 
             }
             
-        }
+//        }
     }
     
 }
