@@ -18,6 +18,8 @@ struct Landmark:Identifiable {
 
 struct FridayUIDesignView2: View {
     
+    @State var showSideMenu: Bool = false
+    let dragMenu: CGFloat = 130
     @State var index: Int = 1
     @State var mapRegion: MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
@@ -41,6 +43,7 @@ struct FridayUIDesignView2: View {
                         .clipShape(Circle())
                 }
             }
+            .opacity(showSideMenu == true ? 0.3 : 1)
             .ignoresSafeArea()
             
             VStack{
@@ -59,6 +62,20 @@ struct FridayUIDesignView2: View {
                 textAndButtonsView
                 
             }
+            .opacity(showSideMenu == true ? 0.3 : 1)
+            
+            SideMenuView()
+                .offset(x: showSideMenu == true ? 0 : -286)
+                .gesture(
+                    DragGesture()
+                        .onEnded({ value in
+                            let gestureMenuShow = value.translation.width > self.dragMenu
+                            withAnimation(){
+                                showSideMenu = gestureMenuShow
+                            }
+                        })
+                )
+            
             
         }
         
@@ -67,7 +84,13 @@ struct FridayUIDesignView2: View {
     var searchAndAreas: some View {
         VStack{
             HStack(spacing: 80) {
-                Button(action: {}, label: {
+                Button(action: {
+                    
+                    withAnimation(){
+                        showSideMenu =  true
+                    }
+                    
+                }, label: {
                     Image(systemName: "line.3.horizontal")
                         .resizable()
                         .FontForegroundColorModifier(22, .light, .default, 25, 18, .black)

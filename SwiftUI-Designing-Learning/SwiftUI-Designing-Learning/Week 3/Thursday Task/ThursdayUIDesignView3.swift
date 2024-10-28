@@ -20,42 +20,45 @@ struct ThursdayUIDesignView3: View {
             Color("customBlue")
                 .ignoresSafeArea()
             
-            Image("collectionBackground")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 450 ,height: 220)
-                .clipShape(RoundedRectangle(cornerRadius: 60))
-                .offset(x:28 ,y:-350)
-            
-            
             ScrollView {
-                VStack(alignment: .leading){
+                
+                ZStack(alignment: .top){
                     
-                    profileImageView
-                        .offset(y:-20)
+                    Image("collectionBackground")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 450 ,height: 220)
+                        .clipShape(RoundedRectangle(cornerRadius: 60))
+                        .offset(x:28 ,y:-105)
                     
-                    VStack(alignment: .leading, spacing: 13) {
+                    VStack(alignment: .leading){
                         
-                        profileNameAndTextView
+                        profileImageView
+                            .offset(y:-20)
                         
-                        followAndMessageView
-                        
-                        ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
-                            picturesScrollView
-                                .offset(y:60)
+                        VStack(alignment: .leading, spacing: 13) {
                             
-                            collectionAndPostsView // This bar needs to be stuck .
+                            profileNameAndTextView
                             
+                            followAndMessageView
+                            
+                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
+                                picturesScrollView
+                                    .offset(y:60)
+                                
+                                collectionAndPostsView // This bar needs to be stuck .
+                                
+                            }
                         }
+                        .padding(.horizontal)
+                        .offset(y:-40)
+                        
+                        
                     }
                     .padding(.horizontal)
-                    .offset(y:-40)
-                    
-                    
+                    .frame(width: 400 )
+                    .offset(y:45)
                 }
-                .padding(.horizontal)
-                .frame(width: 400 )
-                .offset(y:45)
 
             }
                         
