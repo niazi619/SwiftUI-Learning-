@@ -28,7 +28,7 @@ struct TuesdayUIDesignView4: View {
                 VStack{
                     
                     header
-                    
+
                     horizantalTabBarView
                     
                     List {
@@ -49,8 +49,7 @@ struct TuesdayUIDesignView4: View {
                     }
                     .frame(width: 450)
                     .offset(y:-10)
-                    
-                    
+                       
                 }
                 
                 Button(action: {}) {
