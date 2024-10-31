@@ -13,7 +13,7 @@ struct ThursdayUIDesignView4: View {
     private let characterLimit = 25
     
     var body: some View {
-        ZStack{
+        NavigationStack{
             
             VStack{
                 
@@ -42,8 +42,12 @@ struct ThursdayUIDesignView4: View {
             
             Spacer()
             
-            Text("Next")
-                .FontForegroundColorModifier(20, .medium, .default, nil, nil, .black)
+            NavigationLink(destination: {
+                ThursdayUIDesignView4Screen2()
+            }, label: {
+                Text("Next")
+                    .FontForegroundColorModifier(20, .medium, .default, nil, nil, .black)
+            })
             
         }
         .padding(.bottom,30)
