@@ -55,6 +55,9 @@
 		18EBAF582CB808540053D2FE /* WednesdayUIDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBAF572CB808540053D2FE /* WednesdayUIDesignViewModel.swift */; };
 		18F7BDFA2CBCFE1B0015C160 /* FridayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7BDF92CBCFE1B0015C160 /* FridayUIDesignView.swift */; };
 		18F7BDFF2CBD5EC10015C160 /* MondayUIDesignView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7BDFE2CBD5EC10015C160 /* MondayUIDesignView2.swift */; };
+		18FEEA472CD4C3BE00EB776D /* FridayUIDesignView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEEA462CD4C3BE00EB776D /* FridayUIDesignView4.swift */; };
+		18FEEA492CD4C3D700EB776D /* FridayUIDesignDataModel4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEEA482CD4C3D700EB776D /* FridayUIDesignDataModel4.swift */; };
+		18FEEA4B2CD4C3EA00EB776D /* FridayUIDesignViewModel4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEEA4A2CD4C3EA00EB776D /* FridayUIDesignViewModel4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,9 @@
 		18EBAF572CB808540053D2FE /* WednesdayUIDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignViewModel.swift; sourceTree = "<group>"; };
 		18F7BDF92CBCFE1B0015C160 /* FridayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignView.swift; sourceTree = "<group>"; };
 		18F7BDFE2CBD5EC10015C160 /* MondayUIDesignView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayUIDesignView2.swift; sourceTree = "<group>"; };
+		18FEEA462CD4C3BE00EB776D /* FridayUIDesignView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignView4.swift; sourceTree = "<group>"; };
+		18FEEA482CD4C3D700EB776D /* FridayUIDesignDataModel4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignDataModel4.swift; sourceTree = "<group>"; };
+		18FEEA4A2CD4C3EA00EB776D /* FridayUIDesignViewModel4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignViewModel4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 				187CFA7F2CCFD54400DC980B /* Tuesday Task */,
 				187D96C72CD2166E00811CF4 /* Wednesday Task */,
 				187D96CA2CD23E2A00811CF4 /* Thursday Task */,
+				18FEEA452CD4C36F00EB776D /* Firday Task */,
 			);
 			path = "Week 4";
 			sourceTree = "<group>";
@@ -375,6 +382,16 @@
 			path = "Monday Task";
 			sourceTree = "<group>";
 		};
+		18FEEA452CD4C36F00EB776D /* Firday Task */ = {
+			isa = PBXGroup;
+			children = (
+				18FEEA482CD4C3D700EB776D /* FridayUIDesignDataModel4.swift */,
+				18FEEA462CD4C3BE00EB776D /* FridayUIDesignView4.swift */,
+				18FEEA4A2CD4C3EA00EB776D /* FridayUIDesignViewModel4.swift */,
+			);
+			path = "Firday Task";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189E9EF52CBEA45500BA17BA /* WednesdayUIDesignView2.swift in Sources */,
+				18FEEA492CD4C3D700EB776D /* FridayUIDesignDataModel4.swift in Sources */,
 				18DDC0552CC7BE0900B83001 /* TuesdayUIDesignView3TabView.swift in Sources */,
 				186FEF032CB3ECA0004F13AF /* ContentView.swift in Sources */,
 				18BC2DAA2CD375FC00780353 /* ThursdayUIDesignView4Screen3.swift in Sources */,
@@ -455,6 +473,7 @@
 				18F7BDFF2CBD5EC10015C160 /* MondayUIDesignView2.swift in Sources */,
 				18854BAC2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift in Sources */,
 				18B654A52CC24E4D0008CB0F /* FridayUIDesignView2.swift in Sources */,
+				18FEEA472CD4C3BE00EB776D /* FridayUIDesignView4.swift in Sources */,
 				186FEF102CB3ED0D004F13AF /* MondayUIDesignView.swift in Sources */,
 				185076992CCA648B00612817 /* ThursdayUIDesignViewModel3.swift in Sources */,
 				18D338FA2CD0D47F00D9A236 /* TuesdayUIDesignDataModel4.swift in Sources */,
@@ -490,6 +509,7 @@
 				18947F8E2CBFA4040002342D /* WednesdayUIDesignDataModel2.swift in Sources */,
 				18CCB84D2CC0F0F60052D4A9 /* ThursdayUIDesignView2.swift in Sources */,
 				18C81AF62CCBE5090063C72D /* FridayUIDesignViewModel2.swift in Sources */,
+				18FEEA4B2CD4C3EA00EB776D /* FridayUIDesignViewModel4.swift in Sources */,
 				187CFA7E2CCFBE4700DC980B /* MondayUIDesignView4TabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
