@@ -18,6 +18,7 @@ struct MondayUIDesignView5: View {
         ZStack{
             Image("cyanBackground")
                 .resizable()
+                .frame(width: 400 ,height: 760)
                 .scaledToFill()
                 .offset(y:-100)
                 .ignoresSafeArea()
@@ -34,11 +35,12 @@ struct MondayUIDesignView5: View {
                 
                 Spacer()
                 
-                horizantalTabBar
-                ongoingEventsView
-                upcomingEventsView
-                
-                
+                ScrollView{
+                    horizantalTabBar
+                    ongoingEventsView
+                    upcomingEventsView
+                }
+                .padding(.top,10)
             }
             .frame(width: 400)
             

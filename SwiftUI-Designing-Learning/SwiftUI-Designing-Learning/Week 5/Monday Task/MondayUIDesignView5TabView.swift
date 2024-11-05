@@ -26,7 +26,7 @@ struct MondayUIDesignView5TabView: View {
                 Text("Settings View")
                     .tag(4)
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+//            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .ignoresSafeArea()
             
             // Custom Tab Bar
@@ -35,24 +35,30 @@ struct MondayUIDesignView5TabView: View {
                 
                 // Home Button
                 Button(action: { selectedTab = 0 }) {
-                    VStack {
+                    VStack(spacing: 6){
                         Image(systemName: "house")
+                            .resizable()
+                            .frame(width: 20 ,height: 20)
                         Text("Home")
                             .font(.caption)
                     }
-                    .foregroundColor(selectedTab == 0 ? .blue : .gray)
+                    .FontForegroundColorModifier(13, .regular, .default, 65, nil, (selectedTab == 0 ? .blue : .gray))
+                    .offset(y: -5)
                 }
                 
                 Spacer()
                 
                 // Saved Button
                 Button(action: { selectedTab = 1 }) {
-                    VStack {
+                    VStack(spacing: 6){
                         Image(systemName: "heart")
+                            .resizable()
+                            .frame(width: 20 ,height: 20)
                         Text("Saved")
                             .font(.caption)
                     }
-                    .foregroundColor(selectedTab == 1 ? .blue : .gray)
+                    .FontForegroundColorModifier(13, .regular, .default, 65, nil, (selectedTab == 1 ? .blue : .gray))
+                    .offset(y: -5)
                 }
                 
                 Spacer()
@@ -85,24 +91,30 @@ struct MondayUIDesignView5TabView: View {
                 
                 // Add Event Button
                 Button(action: { selectedTab = 3 }) {
-                    VStack {
+                    VStack(spacing: 6){
                         Image(systemName: "plus.app")
+                            .resizable()
+                            .frame(width: 20 ,height: 20)
                         Text("Add Event")
                             .font(.caption)
                     }
-                    .foregroundColor(selectedTab == 3 ? .blue : .gray)
+                    .FontForegroundColorModifier(13, .regular, .default, 65, nil, (selectedTab == 3 ? .blue : .gray))
+                    .offset(y: -5)
                 }
                 
                 Spacer()
                 
                 // Settings Button
                 Button(action: { selectedTab = 4 }) {
-                    VStack {
+                    VStack(spacing: 6){
                         Image(systemName: "gearshape")
+                            .resizable()
+                            .frame(width: 20 ,height: 20)
                         Text("Settings")
                             .font(.caption)
                     }
-                    .foregroundColor(selectedTab == 4 ? .blue : .gray)
+                    .FontForegroundColorModifier(13, .regular, .default, 65, nil, (selectedTab == 4 ? .blue : .gray))
+                    .offset(y: -5)
                 }
                 
 //                Spacer()
@@ -112,12 +124,13 @@ struct MondayUIDesignView5TabView: View {
             .background(
                 Color.white
 //                    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
-                    .shadow(radius: 2)
+                    .clipShape(CurvedTabBarShape())
+                    .shadow(color: .gray.opacity(0.3), radius: 10, x: 0, y: -25)
             )
             
             .frame(maxWidth: .infinity)
             .shadow(radius: 30)
-            .offset(y:30)
+            .offset(y:32)
         }
     }
 }
@@ -128,109 +141,72 @@ struct MondayUIDesignView5TabView_Previews: PreviewProvider {
     }
 }
 
-
-struct CustomTabBarView: View {
-    @State private var selectedTab = 0
-
-    var body: some View {
-        ZStack(alignment: .bottom) {
-            // Main content
-            TabView(selection: $selectedTab) {
-                Text("Home View")
-                    .tag(0)
-                Text("Saved View")
-                    .tag(1)
-                Text("Explore View")
-                    .tag(2)
-                Text("Add Event View")
-                    .tag(3)
-                Text("Settings View")
-                    .tag(4)
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            
-            // Custom Tab Bar
-            HStack {
-                Spacer()
-                
-                // Home Button
-                Button(action: { selectedTab = 0 }) {
-                    VStack {
-                        Image(systemName: "house")
-                        Text("Home")
-                            .font(.caption)
-                    }
-                    .foregroundColor(selectedTab == 0 ? .blue : .gray)
-                }
-                
-                Spacer()
-                
-                // Saved Button
-                Button(action: { selectedTab = 1 }) {
-                    VStack {
-                        Image(systemName: "heart")
-                        Text("Saved")
-                            .font(.caption)
-                    }
-                    .foregroundColor(selectedTab == 1 ? .blue : .gray)
-                }
-                
-                Spacer()
-                
-                // Center Circular Explore Button
-                Button(action: { selectedTab = 2 }) {
-                    ZStack {
-                        Circle()
-                            .fill(Color.blue)
-                            .frame(width: 60, height: 60)
-                            .shadow(radius: 4)
-                        Image(systemName: "square.grid.2x2")
-                            .foregroundColor(.white)
-                            .font(.system(size: 24))
-                    }
-                }
-                .offset(y: -20) // Lift the button slightly
-                
-                Spacer()
-                
-                // Add Event Button
-                Button(action: { selectedTab = 3 }) {
-                    VStack {
-                        Image(systemName: "plus.app")
-                        Text("Add Event")
-                            .font(.caption)
-                    }
-                    .foregroundColor(selectedTab == 3 ? .blue : .gray)
-                }
-                
-                Spacer()
-                
-                // Settings Button
-                Button(action: { selectedTab = 4 }) {
-                    VStack {
-                        Image(systemName: "gearshape")
-                        Text("Settings")
-                            .font(.caption)
-                    }
-                    .foregroundColor(selectedTab == 4 ? .blue : .gray)
-                }
-                
-//                Spacer()
-            }
-            .padding(.horizontal, 16)
-            .padding(.bottom, 20)
-            .background(
-                Color.white
-                    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
-                    .shadow(radius: 2)
-            )
-            .frame(maxWidth: .infinity)
-        }
+// Custom Shape for the Tab Bar Curve
+struct CurvedTabBarShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        // Constants for curve control
+        let curveHeight: CGFloat = 50
+        let controlPointY: CGFloat = 25
+        let transitionPointOffset: CGFloat = 20
+        
+        // Starting point
+        path.move(to: CGPoint(x: 0, y: 0))
+        
+        // First smooth transition into curve
+        path.addLine(to: CGPoint(x: rect.width * 0.36 - transitionPointOffset, y: 0))
+        
+        path.addCurve(
+            to: CGPoint(x: rect.width * 0.413, y: controlPointY),
+            control1: CGPoint(x: rect.width * 0.39 - transitionPointOffset/2, y: 0),
+            control2: CGPoint(x: rect.width * 0.39, y: controlPointY/2)
+        )
+        
+        // Main center curve
+        path.addCurve(
+            to: CGPoint(x: rect.width * 0.59, y: controlPointY),
+            control1: CGPoint(x: rect.width * 0.45, y: curveHeight),
+            control2: CGPoint(x: rect.width * 0.55, y: curveHeight)
+        )
+        
+        // Second smooth transition out of curve
+        path.addCurve(
+            to: CGPoint(x: rect.width * 0.64 + transitionPointOffset, y: 0),
+            control1: CGPoint(x: rect.width * 0.61, y: controlPointY/2),
+            control2: CGPoint(x: rect.width * 0.61 + transitionPointOffset/2, y: 0)
+        )
+        
+        // Complete the shape
+        path.addLine(to: CGPoint(x: rect.width, y: 0))
+        path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+        path.addLine(to: CGPoint(x: 0, y: rect.height))
+        path.closeSubpath()
+        
+        return path
     }
 }
 
-struct CustomTabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomTabBarView()
-    }
-}
+//struct CurvedTabBarShape: Shape {
+//    func path(in rect: CGRect) -> Path {
+//        var path = Path()
+//
+//        // Start drawing from the bottom left corner
+//        path.move(to: CGPoint(x: 0, y: 0))
+//        path.addLine(to: CGPoint(x: rect.width * 0.36, y: 0))
+//
+//        // Curve
+//        path.addQuadCurve(
+//            to: CGPoint(x: rect.width * 0.64, y: 0),
+//            control: CGPoint(x: rect.width * 0.5, y: 90)
+//        )
+//
+//        // Continue to the bottom right corner
+//        path.addLine(to: CGPoint(x: rect.width, y: 0))
+//        path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+//        path.addLine(to: CGPoint(x: 0, y: rect.height))
+//        path.closeSubpath()
+//
+//        return path
+//    }
+//}
