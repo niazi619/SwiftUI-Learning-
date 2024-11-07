@@ -187,26 +187,3 @@ struct CurvedTabBarShape: Shape {
     }
 }
 
-//struct CurvedTabBarShape: Shape {
-//    func path(in rect: CGRect) -> Path {
-//        var path = Path()
-//
-//        // Start drawing from the bottom left corner
-//        path.move(to: CGPoint(x: 0, y: 0))
-//        path.addLine(to: CGPoint(x: rect.width * 0.36, y: 0))
-//
-//        // Curve
-//        path.addQuadCurve(
-//            to: CGPoint(x: rect.width * 0.64, y: 0),
-//            control: CGPoint(x: rect.width * 0.5, y: 90)
-//        )
-//
-//        // Continue to the bottom right corner
-//        path.addLine(to: CGPoint(x: rect.width, y: 0))
-//        path.addLine(to: CGPoint(x: rect.width, y: rect.height))
-//        path.addLine(to: CGPoint(x: 0, y: rect.height))
-//        path.closeSubpath()
-//
-//        return path
-//    }
-//}

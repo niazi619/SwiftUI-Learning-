@@ -38,7 +38,8 @@ struct FrameBackgroundColorModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
             .frame(width: width ,height: height)
-            .background(backgroundColor?.opacity(opacity ?? 1).cornerRadius(cornerRadius ?? 0))
+            .background(backgroundColor?.opacity(opacity ?? 1))
+            .cornerRadius(cornerRadius ?? 0)
     }
     
 }
