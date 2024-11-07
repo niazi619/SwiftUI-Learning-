@@ -29,18 +29,19 @@ class TuesdayUIDesignViewModel5: ObservableObject{
 //        case groovyhiphop
 //    }
     
-    func playMusic(music: String ,playAndPause: Bool){
+    func playMusic(music: String){
         
         guard let url = Bundle.main.url(forResource: music, withExtension: ".mp3") else {return}
         
         do{
             musicPlayer = try AVAudioPlayer(contentsOf: url)
             duration = musicPlayer?.duration ?? 0.1
-            if playAndPause == true{
-                musicPlayer?.play()
-            }else{
-                musicPlayer?.pause()
-            }
+            musicPlayer?.prepareToPlay()
+//            if playAndPause == true{
+//                musicPlayer?.play()
+//            }else{
+//                musicPlayer?.pause()
+//            }
             
         }catch let error {
             print("Error on Music\(error.localizedDescription)")

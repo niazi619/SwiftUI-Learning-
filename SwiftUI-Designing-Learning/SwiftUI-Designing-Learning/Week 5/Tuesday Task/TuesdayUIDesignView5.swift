@@ -10,8 +10,8 @@ import SwiftUI
 struct TuesdayUIDesignView5: View {
     
     @State var isPlaying: Bool = false
-    @State var music: String = ""
     @State var currentSongIndex: Int = 0
+    @State var music: String = ""
     @State var backwardButtonDisable: Bool = false
     @State var forwardButtonDisable: Bool = false
     
@@ -97,21 +97,25 @@ struct TuesdayUIDesignView5: View {
                         .FontForegroundColorModifier(20, .regular, .default, 25, 18, backwardButtonDisable == true ? .gray : .white)
                 })
                 .disabled(backwardButtonDisable)
-                .onChange(of: currentSongIndex) { newValue in
-                    if newValue <= 0 {
-                        backwardButtonDisable = true
-                    }
-                }
+//                .onChange(of: currentSongIndex) { newValue in
+//                    if newValue <= 0 {
+//                        backwardButtonDisable = true
+//                    }
+//                }
                 
                 Button(action: {
                     
                     isPlaying.toggle()
+                    
                     music = vm.musicDataList[currentSongIndex].songURLString
-                    vm.playMusic(music: music, playAndPause: isPlaying)
+                    
+                    vm.playMusic(music: music)
                     
                     if isPlaying{
+                        vm.musicPlayer?.play()
                         vm.startTimer()
                     }else{
+                        vm.musicPlayer?.pause()
                         vm.stopTimer()
                     }
                     
@@ -121,6 +125,36 @@ struct TuesdayUIDesignView5: View {
                         .FontForegroundColorModifier(20, .regular, .default, 23, 23, .white)
                         .FrameBackgroundColorModifier(80, 80, Color("customPurple"), 1,60)
                 })
+                .onChange(of: currentSongIndex) { newValue in
+                    if newValue < 0 {
+                        backwardButtonDisable = true
+                    }else if newValue == 0{
+                        music = vm.musicDataList[currentSongIndex].songURLString
+                        
+                        vm.playMusic(music: music)
+                        isPlaying = true
+                        vm.musicPlayer?.play()
+                        vm.startTimer()
+                        
+                        backwardButtonDisable = true
+                    }else if newValue == vm.musicDataList.count - 1{
+                        music = vm.musicDataList[currentSongIndex].songURLString
+                        
+                        vm.playMusic(music: music)
+                        isPlaying = true
+                        vm.musicPlayer?.play()
+                        vm.startTimer()
+                        
+                        forwardButtonDisable = true
+                    } else{
+                        music = vm.musicDataList[currentSongIndex].songURLString
+                        
+                        vm.playMusic(music: music)
+                        isPlaying = true
+                        vm.musicPlayer?.play()
+                        vm.startTimer()
+                    }
+                }
                 
                 Button(action: {
                     currentSongIndex = currentSongIndex + 1
@@ -132,17 +166,18 @@ struct TuesdayUIDesignView5: View {
                         .FontForegroundColorModifier(20, .regular, .default, 25, 18,forwardButtonDisable == true ? .gray : .white)
                 })
                 .disabled(forwardButtonDisable)
-                .onChange(of: currentSongIndex) { newValue in
-                    if newValue == vm.musicDataList.count - 1{
-                        forwardButtonDisable = true
-                    }
-                }
+//                .onChange(of: currentSongIndex) { newValue in
+//                    if newValue == vm.musicDataList.count - 1{
+//                        forwardButtonDisable = true
+//                    }
+//                }
                 
             }
             
             
         }
         .onAppear{
+//            vm.playMusic()
             if currentSongIndex <= 0 {
                 backwardButtonDisable = true
             }
