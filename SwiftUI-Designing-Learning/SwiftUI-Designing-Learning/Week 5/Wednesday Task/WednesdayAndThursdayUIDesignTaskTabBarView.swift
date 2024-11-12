@@ -23,7 +23,7 @@ struct WednesdayAndThursdayUIDesignTaskTabBarView: View {
                     .tag(2)
                 Text("More Options")
                     .tag(3)
-                Text("Profile VIew")
+                ThursdayUIDesignView5()
                     .tag(4)
             }
             
