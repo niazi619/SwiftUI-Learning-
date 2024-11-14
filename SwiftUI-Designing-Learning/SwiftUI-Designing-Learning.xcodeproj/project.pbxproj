@@ -30,6 +30,7 @@
 		187F10782CC9269400CDA6F5 /* WednesdayUIDesignView3TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F10772CC9269400CDA6F5 /* WednesdayUIDesignView3TabView.swift */; };
 		187F107B2CC93E8F00CDA6F5 /* ThursdayUIDesignView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F107A2CC93E8F00CDA6F5 /* ThursdayUIDesignView3.swift */; };
 		18854BAC2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18854BAB2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift */; };
+		1890F3B82CE39F1B00CF9053 /* Practics Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F3B72CE39F1B00CF9053 /* Practics Gesture.swift */; };
 		18947F8C2CBFA38C0002342D /* WednesdayUIDesignViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18947F8B2CBFA38C0002342D /* WednesdayUIDesignViewModel2.swift */; };
 		18947F8E2CBFA4040002342D /* WednesdayUIDesignDataModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18947F8D2CBFA4040002342D /* WednesdayUIDesignDataModel2.swift */; };
 		18947F902CBFE84D0002342D /* WednesdayUIDesignView2TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18947F8F2CBFE84D0002342D /* WednesdayUIDesignView2TabView.swift */; };
@@ -58,7 +59,6 @@
 		18DDC0512CC794A800B83001 /* TuesdayUIDesignDataModel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDC0502CC794A800B83001 /* TuesdayUIDesignDataModel3.swift */; };
 		18DDC0532CC794B900B83001 /* TuesdayUIDesignViewModel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDC0522CC794B900B83001 /* TuesdayUIDesignViewModel3.swift */; };
 		18DDC0552CC7BE0900B83001 /* TuesdayUIDesignView3TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDC0542CC7BE0900B83001 /* TuesdayUIDesignView3TabView.swift */; };
-		18DF978D2CDB7F54000136B8 /* MusicProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF978C2CDB7F54000136B8 /* MusicProgressBarView.swift */; };
 		18E2BA3C2CC639E10061AFF8 /* MondayUIDesignView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E2BA3B2CC639E10061AFF8 /* MondayUIDesignView3.swift */; };
 		18EBAF582CB808540053D2FE /* WednesdayUIDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBAF572CB808540053D2FE /* WednesdayUIDesignViewModel.swift */; };
 		18F0EEA22CE2198B008D0882 /* FridayUIDesignView5Screen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0EEA12CE2198B008D0882 /* FridayUIDesignView5Screen2.swift */; };
@@ -100,6 +100,7 @@
 		187F10772CC9269400CDA6F5 /* WednesdayUIDesignView3TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignView3TabView.swift; sourceTree = "<group>"; };
 		187F107A2CC93E8F00CDA6F5 /* ThursdayUIDesignView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignView3.swift; sourceTree = "<group>"; };
 		18854BAB2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayUIDesignView.swift; sourceTree = "<group>"; };
+		1890F3B72CE39F1B00CF9053 /* Practics Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Practics Gesture.swift"; sourceTree = "<group>"; };
 		18947F8B2CBFA38C0002342D /* WednesdayUIDesignViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignViewModel2.swift; sourceTree = "<group>"; };
 		18947F8D2CBFA4040002342D /* WednesdayUIDesignDataModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignDataModel2.swift; sourceTree = "<group>"; };
 		18947F8F2CBFE84D0002342D /* WednesdayUIDesignView2TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignView2TabView.swift; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		18DDC0502CC794A800B83001 /* TuesdayUIDesignDataModel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignDataModel3.swift; sourceTree = "<group>"; };
 		18DDC0522CC794B900B83001 /* TuesdayUIDesignViewModel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignViewModel3.swift; sourceTree = "<group>"; };
 		18DDC0542CC7BE0900B83001 /* TuesdayUIDesignView3TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayUIDesignView3TabView.swift; sourceTree = "<group>"; };
-		18DF978C2CDB7F54000136B8 /* MusicProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProgressBarView.swift; sourceTree = "<group>"; };
 		18E2BA3B2CC639E10061AFF8 /* MondayUIDesignView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayUIDesignView3.swift; sourceTree = "<group>"; };
 		18EBAF572CB808540053D2FE /* WednesdayUIDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayUIDesignViewModel.swift; sourceTree = "<group>"; };
 		18F0EEA12CE2198B008D0882 /* FridayUIDesignView5Screen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayUIDesignView5Screen2.swift; sourceTree = "<group>"; };
@@ -358,6 +358,7 @@
 				18B174952CDCC7BA00B40417 /* Wednesday Task */,
 				181C74D22CDDF5620063DE55 /* Thursday Task */,
 				181C74D72CDE38690063DE55 /* Friday Task */,
+				1890F3B72CE39F1B00CF9053 /* Practics Gesture.swift */,
 			);
 			path = "Week 5";
 			sourceTree = "<group>";
@@ -368,7 +369,6 @@
 				18BD11122CD9154300DAC03C /* MondayUIDesignView5TabView.swift */,
 				18BD110C2CD8CDCA00DAC03C /* MondayUIDesignView5.swift */,
 				18BD11102CD8F46F00DAC03C /* MondayUIDesignViewModel5.swift */,
-				18DF978C2CDB7F54000136B8 /* MusicProgressBarView.swift */,
 			);
 			path = "Monday Task";
 			sourceTree = "<group>";
@@ -578,7 +578,6 @@
 				187F10722CC8D7CF00CDA6F5 /* WednesdayUIDesignView3.swift in Sources */,
 				18F7BDFF2CBD5EC10015C160 /* MondayUIDesignView2.swift in Sources */,
 				18854BAC2CB90E7000DBCCC1 /* ThursdayUIDesignView.swift in Sources */,
-				18DF978D2CDB7F54000136B8 /* MusicProgressBarView.swift in Sources */,
 				18B654A52CC24E4D0008CB0F /* FridayUIDesignView2.swift in Sources */,
 				18FEEA472CD4C3BE00EB776D /* FridayUIDesignView4.swift in Sources */,
 				18B174972CDCC7E900B40417 /* WednesdayUIDesignView5.swift in Sources */,
@@ -595,6 +594,7 @@
 				18DDC0532CC794B900B83001 /* TuesdayUIDesignViewModel3.swift in Sources */,
 				18F4535B2CDA503D0079E6DC /* TuesdayUIDesignView5.swift in Sources */,
 				18D951A92CB57F3000200DCE /* TuesdayUIDesignViewModel.swift in Sources */,
+				1890F3B82CE39F1B00CF9053 /* Practics Gesture.swift in Sources */,
 				186B61A02CB6D58E00EBE726 /* WednesdayUIDesignView.swift in Sources */,
 				187F10742CC9097500CDA6F5 /* WednesdayUIDesignDataModel3.swift in Sources */,
 				18BD11112CD8F46F00DAC03C /* MondayUIDesignViewModel5.swift in Sources */,

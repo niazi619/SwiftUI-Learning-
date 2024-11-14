@@ -55,10 +55,6 @@ extension View{
     
 }
 
-// Custom color literal function to create colors based on RGB values
-func colorLiteralModifier(_ red: Double, _ green: Double, _ blue: Double) -> Color {
-    return Color(red: red, green: green, blue: blue)
-}
 
 
 struct MondayUIDesignView: View {
